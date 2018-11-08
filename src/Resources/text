@@ -1,0 +1,8 @@
+So what do we do with a stream of String arrays? What we want is the
+individual strings in each array, so we can filter the words that are equal to
+“Java” and count them to see how many times “Java” appears in the file. So
+how do we turn the Stream<String[]> into a stream of String s?
+What if we stream each of the arrays in the stream? We know we can
+create a stream from an array with Arrays.stream() and that inputStream is
+a stream of String arrays. What about mapping each array to a stream, so
+each array becomes a stream of strings, and then process that? Let’s try:
