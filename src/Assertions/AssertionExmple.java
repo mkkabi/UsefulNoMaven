@@ -13,7 +13,9 @@ package Assertions;
 // Asserions have to be enabled by providing -ea with args in command line: java –ea AssertionExmple
 
 import java.util.Scanner; 
-
+//with -ea this class throws Exception 
+//in thread "main" java.lang.AssertionError:  Underweight
+//        at Test.main(Test.java:4)
 public class AssertionExmple {
     public static void main(String args[]){ 
         int value = 15; 
