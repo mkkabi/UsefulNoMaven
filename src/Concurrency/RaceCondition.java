@@ -1,5 +1,5 @@
 
-package Threads;
+package Concurrency;
 
 import java.util.HashSet;
 import java.util.Set;

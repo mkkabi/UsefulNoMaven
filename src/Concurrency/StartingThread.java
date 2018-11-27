@@ -1,5 +1,5 @@
 
-package Threads;
+package Concurrency;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

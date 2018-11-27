@@ -1,5 +1,5 @@
 
-package Threads;
+package Concurrency;
 
 public class RaceConditionFixed {
 
