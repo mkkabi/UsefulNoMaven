@@ -2,13 +2,13 @@ package Concurrency;
 
 public class CheckingAccount {
 
-	private int balance;
+	private volatile int balance;
 
 	public CheckingAccount(int initialBalance) {
 		balance = initialBalance;
 	}
 
-	public boolean withdraw(int amount) {
+	public synchronized boolean withdraw(int amount) {
 		if (amount <= balance) {
 			try {
 				Thread.sleep((int) (Math.random() * 200));
@@ -25,11 +25,10 @@ public class CheckingAccount {
 		Runnable r = new Runnable() {
 			@Override
 			public void run() {
-				String name = Thread.currentThread().
-						getName();
+				String name = Thread.currentThread().getName();
 				for (int i = 0; i < 10; i++) {
-					System.out.println(name + "withdraws $10: "
-							+ ca.withdraw(10));
+					System.out.println(name + " withdraws $10: "
+							  + ca.withdraw(10));
 				}
 			}
 		};
