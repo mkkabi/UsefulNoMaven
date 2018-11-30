@@ -10,26 +10,32 @@ package Concurrency;
 //child thread is started. The method returns the argument passed
 //to parentValue and should be overridden when another value is desired.
 
+//For more insight into ThreadLocal and how it’s implemented, check out
+//patson luk’s “a painless introduction to Java’s threadlocal storage” blog post
+//http://java.dzone.com/articles/painless-introduction-javas-threadlocalstorage
 public class InheritableThreadLocalDemo {
 
 	private static final InheritableThreadLocal<Integer> intVal
-			  = new InheritableThreadLocal<Integer>();
+			= new InheritableThreadLocal<Integer>();
 
 	public static void main(String[] args) {
 		Runnable rP = ()
-				  -> {
-			intVal.set(new Integer(10));
-			Runnable rC = ()
-					  -> {
-				Thread thd = Thread.currentThread();
-				String name = thd.getName();
-				System.out.printf("%s %d%n", name,
-						  intVal.get());
-			};
-			Thread thdChild = new Thread(rC);
-			thdChild.setName("Child");
-			thdChild.start();
-		};
-		new Thread(rP).start();
+				-> {
+					intVal.set(new Integer(10));
+					System.out.printf("%s %d%n", Thread.currentThread().getName(), intVal.get());
+					Runnable rC = ()
+					-> {
+						Thread thd = Thread.currentThread();
+						String name = thd.getName();
+						intVal.set(new Integer(33));
+						System.out.printf("%s %d%n", name, intVal.get());
+					};
+					Thread thdChild = new Thread(rC);
+					thdChild.setName("Child");
+					thdChild.start();
+				};
+		Thread thd1 = new Thread(rP);
+		thd1.setName("parent");
+		thd1.start();
 	}
 }
