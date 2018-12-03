@@ -13,9 +13,6 @@ public class JoinExample {
 		Thread t2 = new Thread(r);
 		
 		t1.join();
-		
 		t2.start();
-		
-		
 	}
 }
