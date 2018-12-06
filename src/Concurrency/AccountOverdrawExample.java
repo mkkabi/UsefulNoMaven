@@ -1,10 +1,10 @@
 
 package Concurrency;
 
-public class AccountOverdtawExample implements Runnable {
+public class AccountOverdrawExample implements Runnable {
 	private Account ac = new Account();
 	public static void main(String[] args) {
-		AccountOverdtawExample st = new AccountOverdtawExample();
+		AccountOverdrawExample st = new AccountOverdrawExample();
 		Thread vasia = new Thread(st);
 		Thread mania = new Thread(st);
 		vasia.setName("Vasia");
