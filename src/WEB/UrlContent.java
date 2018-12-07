@@ -28,9 +28,6 @@ public class UrlContent {
 
 			String inputLine;
 			while ((inputLine = br.readLine()) != null) {
-				if (inputLine.contains("<")) {
-					continue;
-				}
 				System.out.println(inputLine);
 			}
 			br.close();
