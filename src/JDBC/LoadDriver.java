@@ -2,7 +2,9 @@ package JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 // Notice, do not import com.mysql.jdbc.*
 // or you will have problems!
@@ -24,9 +26,10 @@ public class LoadDriver {
 		Connection conn = null;
 
 		try {
-			conn
-					= DriverManager.getConnection("jdbc:mysql://localhost:1521/test", "root", "");
-    // Do something with the Connection
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "mkkabi", "pass");
+			Statement stmt = conn.createStatement();
+			ResultSet res = stmt.executeQuery("select * from Persons");			
+			// Do something with the Connection
 		} catch (SQLException ex) {
 			// handle any errors
 			System.out.println("SQLException: " + ex.getMessage());
