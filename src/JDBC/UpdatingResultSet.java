@@ -3,24 +3,6 @@ package JDBC;
 
 import java.sql.*;
 
-// need to remove empty spaces later
-// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces laters
-
-// need to remove empty spaces later
-// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces laters
-
 public class UpdatingResultSet {
 	
 		// JDBC driver name and database URL
@@ -62,23 +44,6 @@ public class UpdatingResultSet {
 				System.out.println("ID: " + rs.getInt(1) + ", Name: " + rs.getString(2) + " " + rs.getString(3) + 
 						  ", Address: " + rs.getString(4) + ", City: " + rs.getString(5));
 			}
-			
-			
-			
-			
-			
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			// need to remove empty spaces later
-			
-			
-			
 
 			//STEP 6: Clean-up environment
 			rs.close();
