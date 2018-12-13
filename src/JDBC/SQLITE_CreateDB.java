@@ -26,15 +26,17 @@ public class SQLITE_CreateDB {
 				Statement st = conn.createStatement();
 				String createTablePersons = "CREATE TABLE Persons (ID Integer PRIMARY KEY AUTOINCREMENT, LastName varchar(255), "
 					  + "FirstName varchar(255), Address varchar(255), City varchar(255));";
+				
 				String addDataPersons = "INSERT INTO Persons (LastName, FirstName, Address, City) "
 					  + "Values('Vasichkin', 'Anatole', 'gogolia street', 'Moscow')";
+				
 				String selectStatement = "SELECT ID, LastName, FirstName, Address, City FROM Persons";
 				String selectStatement2 = "SELECT ID, LastName, FirstName, Address, City FROM Persons where ID=2";
-		//		st.execute(createTablePersons);
-		//		st.execute(addDataPersons);
+//				st.execute(createTablePersons);
+//				st.execute(addDataPersons);
 				
 
-			ResultSet rs = st.executeQuery(selectStatement2); 
+			ResultSet rs = st.executeQuery(selectStatement); 
 			
 			//Information about a 
 			ResultSetMetaData rsmd = rs.getMetaData();
@@ -45,13 +47,6 @@ public class SQLITE_CreateDB {
 				+ "\nCatalog name "+rsmd.getCatalogName(1)
 				+"\nColumn Class name "+rsmd.getColumnClassName(1)+"\n");
 
-			Statement stmt2 = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-				ResultSet rs2 = stmt2.getResultSet();
-				
-			System.out.println("Row count ===========");
-				System.out.println(RowCount.getRowCount(rs2));
-				
-			
 			while (rs.next()) {
 				System.out.println("ID: " + rs.getInt(1) + ", Name: " + rs.getString(2) + " " + rs.getString(3) + 
 						  ", Address: " + rs.getString(4) + ", City: " + rs.getString(5));
@@ -71,3 +66,18 @@ public class SQLITE_CreateDB {
 		createNewDatabase("test.db");
 	}
 }
+
+
+// need to remove empty spaces later
+// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces laters
+
+
+
+
+
