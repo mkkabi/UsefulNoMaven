@@ -3,6 +3,24 @@ package JDBC;
 
 import java.sql.*;
 
+// need to remove empty spaces later
+// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces laters
+
+// need to remove empty spaces later
+// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces later
+// need to remove empty spaces laters
+
 public class UpdatingResultSet {
 	
 		// JDBC driver name and database URL
@@ -10,7 +28,7 @@ public class UpdatingResultSet {
 	static final String DB_URL = "jdbc:mysql://localhost/test";
 
 	//  Database credentials
-	static final String USER = "root";
+	static final String USER = "adsfasdf";
 	static final String PASS = "";
 
 	public static void main(String[] args) {
@@ -20,16 +38,14 @@ public class UpdatingResultSet {
 
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			String selectStatement = "SELECT PersonID, LastName, FirstName, Address, City FROM Persons";
-			String addDataPersons = "INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) "
-					  + "Values('1', 'Vasichkin', 'Anatole', 'gogolia street', 'Moscow')";
-			
+			String selectStatement = "SELECT ID, LastName, FirstName, Address, City FROM Persons";
+
 
 			ResultSet rs = stmt.executeQuery(selectStatement);
 
 			while (rs.next()) {
 
-				int id = rs.getInt("PersonID");
+				int id = rs.getInt("ID");
 				String first = rs.getString("FirstName");
 				String last = rs.getString("LastName");
 				String address = rs.getString("Address");
@@ -46,6 +62,23 @@ public class UpdatingResultSet {
 				System.out.println("ID: " + rs.getInt(1) + ", Name: " + rs.getString(2) + " " + rs.getString(3) + 
 						  ", Address: " + rs.getString(4) + ", City: " + rs.getString(5));
 			}
+			
+			
+			
+			
+			
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			// need to remove empty spaces later
+			
+			
+			
 
 			//STEP 6: Clean-up environment
 			rs.close();
