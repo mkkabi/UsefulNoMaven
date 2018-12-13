@@ -3,14 +3,14 @@ package JDBC;
 import java.sql.*;
 
 public class BasicExample {
-
+	
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	static final String DB_URL = "jdbc:mysql://localhost/test";
 
 	//  Database credentials
-	static final String USER = "mkkabi";
-	static final String PASS = "pass";
+	static final String USER = "asdfasdf";
+	static final String PASS = "";
 
 	public static void main(String[] args) {
 		Connection conn = null;
@@ -26,21 +26,23 @@ public class BasicExample {
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			//STEP 4: Execute a query
 			stmt = conn.createStatement();
-			String selectStatement = "SELECT PersonID, LastName, FirstName, Address, City FROM Persons";
-			String createTablePersons = "CREATE TABLE Persons (PersonID int, LastName varchar(255), "
-					  + "FirstName varchar(255), Address varchar(255), City varchar(255));";
-			String addDataPersons = "INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) "
-					  + "Values('1', 'Vasichkin', 'Anatole', 'gogolia street', 'Moscow')";
+			String selectStatement = "SELECT ID, LastName, FirstName, Address, City FROM Persons";
+			String createTablePersons = "CREATE TABLE Persons (ID int NOT NULL AUTO_INCREMENT, LastName varchar(255), "
+					  + "FirstName varchar(255), Address varchar(255), City varchar(255), PRIMARY KEY (ID));";
+			
+			
+			String addDataPersons = "INSERT INTO Persons (LastName, FirstName, Address, City) "
+					  + "Values('Vasichkin', 'Anatole', 'gogolia street', 'Moscow')";
 			// Create table Persons and add data
-//			stmt.execute(createTable);
-//			stmt.execute(addDataPersons);
+			//stmt.execute(createTablePersons);
+			//stmt.execute(addDataPersons);
 
 			ResultSet rs = stmt.executeQuery(selectStatement);
 
 			//STEP 5: Extract data from result set
 			while (rs.next()) {
 				//Retrieve by column name
-				int id = rs.getInt("PersonID");
+				int id = rs.getInt("ID");
 				String first = rs.getString("FirstName");
 				String last = rs.getString("LastName");
 				String address = rs.getString("Address");
