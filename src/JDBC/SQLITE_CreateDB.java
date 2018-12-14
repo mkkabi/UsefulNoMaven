@@ -24,19 +24,13 @@ public class SQLITE_CreateDB {
 				DatabaseMetaData meta = conn.getMetaData();
 				System.out.println("The driver name is " + meta.getDriverName());
 				Statement st = conn.createStatement();
-				String createTablePersons = "CREATE TABLE Persons (ID Integer PRIMARY KEY AUTOINCREMENT, LastName varchar(255), "
-					  + "FirstName varchar(255), Address varchar(255), City varchar(255));";
 				
-				String addDataPersons = "INSERT INTO Persons (LastName, FirstName, Address, City) "
-					  + "Values('Vasichkin', 'Anatole', 'gogolia street', 'Moscow')";
-				
-				String selectStatement = "SELECT ID, LastName, FirstName, Address, City FROM Persons";
 				String selectStatement2 = "SELECT ID, LastName, FirstName, Address, City FROM Persons where ID=2";
 //				st.execute(createTablePersons);
-//				st.execute(addDataPersons);
+//				st.execute(Quieries.addDataPersons);
 				
 
-			ResultSet rs = st.executeQuery(selectStatement); 
+			ResultSet rs = st.executeQuery(Quieries.selectStatement); 
 			
 			//Information about a 
 			ResultSetMetaData rsmd = rs.getMetaData();
@@ -59,25 +53,7 @@ public class SQLITE_CreateDB {
 		}
 	}
 
-	/**
-	 * @param args the command line arguments
-	 */
 	public static void main(String[] args) {
 		createNewDatabase("test.db");
 	}
 }
-
-
-// need to remove empty spaces later
-// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces later
-// need to remove empty spaces laters
-
-
-
-
-
