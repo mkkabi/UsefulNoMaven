@@ -25,7 +25,6 @@ public class SQLITE_CreateDB {
 				System.out.println("The driver name is " + meta.getDriverName());
 				Statement st = conn.createStatement();
 				
-				String selectStatement2 = "SELECT ID, LastName, FirstName, Address, City FROM Persons where ID=2";
 //				st.execute(createTablePersons);
 //				st.execute(Quieries.addDataPersons);
 				
@@ -52,7 +51,7 @@ public class SQLITE_CreateDB {
 			System.out.println(e.getMessage());
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		createNewDatabase("test.db");
 	}

@@ -9,8 +9,8 @@ public class BasicExample {
 	static final String DB_URL = "jdbc:mysql://localhost/test";
 
 	//  Database credentials
-	static final String USER = "asdfasdf";
-	static final String PASS = "";
+	static final String USER = "mkkabi";
+	static final String PASS = "pass";
 
 	public static void main(String[] args) {
 		Connection conn = null;

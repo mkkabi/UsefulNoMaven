@@ -35,7 +35,7 @@ public class UpdatingResultSet {
 				
 				if(rs.getString("City").equals("Moscow")){
 					rs.updateString("City", "Nikolaev");
-					rs.updateRow();
+					rs.updateRow();  // Updates row in the DB
 				}
 
 				//Display values
