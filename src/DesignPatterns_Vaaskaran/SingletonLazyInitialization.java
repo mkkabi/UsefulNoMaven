@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns_Vaaskaran;
 
 class MakeACaptain {
 	private static MakeACaptain _captain;

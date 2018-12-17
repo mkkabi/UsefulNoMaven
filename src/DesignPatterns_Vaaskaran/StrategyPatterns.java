@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns_Vaaskaran;
 
 import java.io.IOException;
 //For Java old versions-to take input from user 

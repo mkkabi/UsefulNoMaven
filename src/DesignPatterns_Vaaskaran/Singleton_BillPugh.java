@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns_Vaaskaran;
 
 /*
  Bill Pugh solution 
