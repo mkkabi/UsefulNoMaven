@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 interface IChoice {
+
 	void myChoice(String s1, String s2);
 }
 
@@ -38,7 +39,6 @@ class Context {
 	IChoice myC;
 
 	// Set a Strategy or algorithm in the Context 
-
 	public void SetChoice(IChoice ic) {
 		myC = ic;
 	}
