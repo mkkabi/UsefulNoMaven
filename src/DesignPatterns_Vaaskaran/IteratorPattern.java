@@ -3,7 +3,6 @@ package DesignPatterns_Vaaskaran;
 import java.util.LinkedList;
 
 interface ISubject_Iterator {
-
 	public IIterator CreateIterator();
 }
 
@@ -56,7 +55,6 @@ class Arts implements ISubject_Iterator {
 }
 
 class Science implements ISubject_Iterator {
-
 	private LinkedList<String> subjects;
 
 	public Science() {
