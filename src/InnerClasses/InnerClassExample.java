@@ -10,7 +10,7 @@ abstract
 public
 private
 protected
-static—but static turns it into a static nested class, not an inner class
+static but static turns it into a static nested class, not an inner class
 strictfp
 */
 
