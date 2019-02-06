@@ -1,6 +1,5 @@
 
-package Spring;
-
+package Spring.ConfigurationExample;
 public class ConfigurationExampleDependee {
 	
 	public void getMessage(){

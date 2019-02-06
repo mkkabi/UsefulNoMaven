@@ -1,5 +1,5 @@
 
-package Spring;
+package Spring.Spring;
 
 public class SpellChecker {
    public SpellChecker(){

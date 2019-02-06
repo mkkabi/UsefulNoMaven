@@ -1,4 +1,4 @@
-package Spring;
+package Spring.Spring;
 
 public class HelloIndia {
 

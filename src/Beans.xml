@@ -1,6 +1,6 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
-//https://www.tutorialspoint.com/spring/event_handling_in_spring.htm
+<!--https://www.tutorialspoint.com/spring/event_handling_in_spring.htm-->
 
 <!--
 If you have too many beans having initialization and/or destroy methods with the same name, 
@@ -25,7 +25,7 @@ default-init-method and default-destroy-method attributes on the <beans> element
     <!-- 
     example of using scope to create singleton, declaring initialize and destroy methods
     -->
-    <bean id = "helloWorld" class = "Spring.HelloWorld" scope = "singleton" init-method="init" destroy-method = "destroy">
+    <bean id = "helloWorld" class = "Spring.Spring.HelloWorld" scope = "singleton" init-method="init" destroy-method = "destroy">
         <property name = "message1" value = "Hello World!"/>
         <property name = "message2" value = "Hello Second World!"/>
     </bean>
@@ -40,25 +40,25 @@ default-init-method and default-destroy-method attributes on the <beans> element
         <property name = "message3" value = "Namaste India!"/>
     </bean>
     
-    <bean id = "helloIndia" class = "Spring.HelloIndia" parent = "beanTeamplate">
+    <bean id = "helloIndia" class = "Spring.Spring.HelloIndia" parent = "beanTeamplate">
         <property name = "message1" value = "Hello India!"/>
         <property name = "message3" value = "Namaste India!"/>
     </bean>
     
     <!-- Definition for textEditor bean using inner bean -->
-    <bean id = "textEditor" class = "Spring.TextEditor">
+    <bean id = "textEditor" class = "Spring.Spring.TextEditor">
         <property name = "spellChecker">
-            <bean id = "spellChecker" class = "Spring.SpellChecker"/>
+            <bean id = "spellChecker" class = "Spring.Spring.SpellChecker"/>
         </property>
     </bean>
     
     <!-- creating instance of BeanPostProcessor to implement custom instantiation logic -->
-    <bean class = "Spring.InitHelloWorld" />
+    <bean class = "Spring.Spring.InitHelloWorld" />
     
     
     
     <!-- Definition for javaCollection -->
-   <bean id = "javaCollection" class = "Spring.JavaCollection">
+   <bean id = "javaCollection" class = "Spring.Spring.JavaCollection">
        
        <!--
        If you need to pass a NULL value, then you can pass it as follows −

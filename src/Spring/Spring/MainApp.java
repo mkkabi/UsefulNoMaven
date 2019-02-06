@@ -1,7 +1,5 @@
-package Spring;
+package Spring.Spring;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,13 +9,6 @@ public class MainApp {
 //		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		
-		//  Java Based Configuration
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigurationExample.class);
-
-		ConfigurationExampleTest configurationExampleTest = ctx.getBean(ConfigurationExampleTest.class);
-		configurationExampleTest.getMessage();
-		configurationExampleTest.ced.getMessage();
-
 		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 		objA.setMessage("I'm object A");
 		objA.getMessage();
@@ -40,6 +31,7 @@ public class MainApp {
 		jc.getAddressSet();
 		jc.getAddressMap();
 		jc.getAddressProp();
+
 
 //		method that is declared on the AbstractApplicationContext class. 
 //		This will ensure a graceful shutdown and call the relevant destroy methods.

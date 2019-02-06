@@ -1,5 +1,5 @@
 
-package Spring;
+package Spring.Spring;
 
 public class TextEditor {
    private SpellChecker spellChecker;

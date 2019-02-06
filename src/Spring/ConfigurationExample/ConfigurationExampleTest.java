@@ -1,6 +1,5 @@
 
-package Spring;
-
+package Spring.ConfigurationExample;
 public class ConfigurationExampleTest {
 	
 	ConfigurationExampleDependee ced;
