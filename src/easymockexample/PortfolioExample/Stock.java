@@ -1,4 +1,4 @@
-package easymockexample;
+package easymockexample.PortfolioExample;
 
 public class Stock {
    private String stockId;

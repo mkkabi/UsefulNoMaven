@@ -1,4 +1,4 @@
-package easymockexample;
+package easymockexample.PortfolioExample;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package easymockexample;
+package easymockexample.PortfolioExample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class PortfolioTester {
 
         //Creates a list of stocks to be added to the portfolio
         List<Stock> stocks = new ArrayList<Stock>();
-        Stock googleStock = new Stock("1", "Google", 10);
+        Stock googleStock = new Stock("1", "Google", 1);
         Stock microsoftStock = new Stock("2", "Microsoft", 100);
 
         stocks.add(googleStock);
@@ -43,7 +43,7 @@ public class PortfolioTester {
         portfolio.setStocks(stocks);
 
         // mock the behavior of stock service to return the value of various stocks
-        EasyMock.expect(stockService.getPrice(googleStock)).andReturn(50.00);
+        EasyMock.expect(stockService.getPrice(googleStock)).andReturn(800.00);
         EasyMock.expect(stockService.getPrice(microsoftStock)).andReturn(1000.00);
 
         // activate the mock
@@ -52,7 +52,9 @@ public class PortfolioTester {
         
 
         double marketValue = portfolio.getMarketValue();
-        return marketValue == 100500.0;
+        return marketValue == 100800.0;
+		  
+		  
         
     }
 }
