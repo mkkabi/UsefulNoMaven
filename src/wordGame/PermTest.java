@@ -1,12 +1,13 @@
 package wordGame;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import wordGame.WordChecker;
-import static wordGame.WordChecker.check_for_word;
-
+ 
 public class PermTest {
 
     public static void main(String[] args) throws Exception {
@@ -23,7 +24,8 @@ public class PermTest {
         System.out.println("number of raw results = " + result.size());
         System.out.println("number of filtered elements = " + filtered.size());
 
-        filtered.stream().filter(t -> check_for_word(t)).forEach(System.out::println);
+        BufferedReader in = new BufferedReader(new FileReader("wordsEn.txt"));
+//        filtered.stream().filter(t -> check_for_word_BufferedReader_Stream(in, t)).forEach(System.out::println);
 
         System.out.println("\nEND \n");
     }

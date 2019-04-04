@@ -5,8 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import wordGame.WordChecker;
-import static wordGame.WordChecker.check_for_word;
-
+ 
 public class PermuteCleaner {
 
     public static void main(String[] args) throws Exception {
