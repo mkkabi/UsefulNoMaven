@@ -1,4 +1,4 @@
-package com.pluralsight.mediator;
+package DesignPatterns_Pluralsight.behavioral.mediator;
 
 //colleague
 public interface Command {

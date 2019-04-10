@@ -1,4 +1,4 @@
-package DesignPatterns_Pluralsight.Behavioral.CommandPattern;
+package DesignPatterns_Pluralsight.behavioral.Command;
 
 //concrete command
 public class ToggleCommand implements Command {

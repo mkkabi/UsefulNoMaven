@@ -1,4 +1,4 @@
-package com.pluralsight.memento;
+package DesignPatterns_Pluralsight.behavioral.memento;
 
 import java.util.Stack;
 

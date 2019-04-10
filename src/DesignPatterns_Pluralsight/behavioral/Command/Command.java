@@ -1,7 +1,5 @@
-package DesignPatterns_Pluralsight.Behavioral.CommandPattern;
+package DesignPatterns_Pluralsight.behavioral.Command;
 
 public interface Command {
-
 	void execute();
-
 }
