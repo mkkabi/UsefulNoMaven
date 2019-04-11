@@ -1,4 +1,4 @@
-package com.pluralsight.observer;
+package DesignPatterns_Pluralsight.behavioral.observer;
 
 public class TabletClient extends Observer {
 

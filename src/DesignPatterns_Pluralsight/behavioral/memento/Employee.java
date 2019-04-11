@@ -1,10 +1,7 @@
 package DesignPatterns_Pluralsight.behavioral.memento;
 
 //originator
-
-import java.io.Serializable;
-
-public class Employee implements Serializable{
+public class Employee {
 
     private String name;
     private String address;
