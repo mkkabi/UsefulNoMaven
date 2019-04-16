@@ -1,8 +1,8 @@
-package com.pluralsight.state;
+package DesignPatterns_Pluralsight.behavioral.state;
 
 public abstract class State {
-	
-	public void handleRequest() {
-		System.out.println("Shouldn't be able to get here.");
-	}
+
+    public void handleRequest() {
+        System.out.println("Shouldn't be able to get here.");
+    }
 }

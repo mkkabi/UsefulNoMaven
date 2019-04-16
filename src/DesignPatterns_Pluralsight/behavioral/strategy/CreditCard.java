@@ -1,41 +1,41 @@
-package com.pluralsight.strategy;
+package DesignPatterns_Pluralsight.behavioral.strategy;
 
 public class CreditCard {
 
-	private String number;
-	private String date;
-	private String cvv;
-	private ValidationStrategy strategy;
-	
-	public CreditCard(ValidationStrategy strategy) {
-		this.strategy = strategy;
-	}
-	
-	public boolean isValid() {
-		return strategy.isValid(this);
-	}
+    private String number;
+    private String date;
+    private String cvv;
+    private ValidationStrategy strategy;
 
-	public String getNumber() {
-		return number;
-	}
+    public CreditCard(ValidationStrategy strategy) {
+        this.strategy = strategy;
+    }
 
-	public void setNumber(String number) {
-		this.number = number;
-	}
+    public boolean isValid() {
+        return strategy.isValid(this);
+    }
 
-	public String getDate() {
-		return date;
-	}
+    public String getNumber() {
+        return number;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
-	public String getCvv() {
-		return cvv;
-	}
+    public String getDate() {
+        return date;
+    }
 
-	public void setCvv(String cvv) {
-		this.cvv = cvv;
-	}
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCvv() {
+        return cvv;
+    }
+
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
+    }
 }
