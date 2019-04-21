@@ -1,8 +1,9 @@
-package com.pluralsight.visitor;
+package DesignPatterns_Pluralsight.behavioral.visitor;
 
 public class Wheel implements AtvPart {
-	@Override
-	public void accept(AtvPartVisitor visitor) {
-		visitor.visit(this);
-	}
+
+    @Override
+    public void accept(AtvPartVisitor visitor) {
+        visitor.visit(this);
+    }
 }
