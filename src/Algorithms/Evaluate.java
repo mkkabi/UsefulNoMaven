@@ -1,5 +1,6 @@
 package Algorithms;
 
+import Algorithms_Sedgewick.Sorting.tools.StdOut;
 import java.util.Scanner;
 import java.util.Locale;
 import java.io.BufferedInputStream;

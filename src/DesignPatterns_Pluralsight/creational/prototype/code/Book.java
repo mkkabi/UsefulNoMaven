@@ -1,14 +1,14 @@
-package com.pluralsight.prototype;
+package DesignPatterns_Pluralsight.creational.prototype.code;
 
 public class Book extends Item {
 
-	private int numberOfPages;
+    private int numberOfPages;
 
-	public int getNumberOfPages() {
-		return numberOfPages;
-	}
+    public int getNumberOfPages() {
+        return numberOfPages;
+    }
 
-	public void setNumberOfPages(int numberOfPages) {
-		this.numberOfPages = numberOfPages;
-	}
+    public void setNumberOfPages(int numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
 }

@@ -1,5 +1,4 @@
-
-package Algorithms;
+package Algorithms_Sedgewick.Sorting.tools;
 
 /******************************************************************************
  *  Compilation:  javac StdOut.java
@@ -10,7 +9,6 @@ package Algorithms;
  *
  ******************************************************************************/
 
-import Algorithms_Sedgewick.Sorting.*;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
