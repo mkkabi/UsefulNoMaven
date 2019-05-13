@@ -5,6 +5,12 @@ import Algorithms_Sedgewick.Sorting.Selection;
 import Algorithms_Sedgewick.Sorting.tools.StdOut;
 import Algorithms_Sedgewick.Sorting.tools.StdRandom;
 import Algorithms_Sedgewick.Sorting.tools.Stopwatch;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SortCompare {
 
@@ -43,15 +49,39 @@ public class SortCompare {
         return total;
     }
 
+    public static List<String> getFileAsList(String uri) {
+        List<String> list = new ArrayList();
+
+        try (BufferedReader in = new BufferedReader(new FileReader(uri));) {
+            String str;
+            while ((str = in.readLine()) != null) {
+
+                list.add(str.toLowerCase());
+            }
+            in.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.toString());
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
+        return list;
+    }
+ 
+
     public static void main(String[] args) {
-        String alg1 = args[0];
-        String alg2 = args[1];
-        int N = Integer.parseInt(args[2]);
-        int T = Integer.parseInt(args[3]);
+        /*        
+        String alg1 = "Selection";
+        String alg2 = "Shell";
+        int N = 250;
+        int T = 120;
         double t1 = timeRandomInput(alg1, N, T); // total for alg1
         double t2 = timeRandomInput(alg2, N, T); // total for alg2
         StdOut.printf("For %d random Doubles\n %s is", N, alg1);
         StdOut.printf(" %.1f times faster than %s\n", t2 / t1, alg2);
+        
+         */
+
+        List<String> doct = getFileAsList("/src/Resources/wordsRu.txt");
     }
 
 }
