@@ -1,5 +1,5 @@
 
-package designpatterns_pluralsight.behavioral.ChainofResponsibilityPattern;
+package DesignPatterns_Pluralsight.behavioral.ChainOfResponsibility;
 
 class CEO extends Handler{
 

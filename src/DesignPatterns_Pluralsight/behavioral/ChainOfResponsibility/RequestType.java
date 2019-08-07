@@ -1,6 +1,6 @@
  
-package designpatterns_pluralsight.behavioral.ChainofResponsibilityPattern;
+package DesignPatterns_Pluralsight.behavioral.ChainOfResponsibility;
  
 public enum RequestType {
-    CONFERENCE, PURCHASE;
+    CONFERENCE, PURCHASE, HIRE, MAKECOFFEE;
 }

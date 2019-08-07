@@ -48,7 +48,8 @@ public class Example {
         String[] a = {"asdf3", "asdf2", "asdf1", "asdf", "asdf4", "asdf5", "asdf6", "asdf7", "asdf8", "asdfdf", "asdf9", "asdf10", "asdf11", "asdf12"
         , "asdf13", "asdf14", "asdf15", "asdf16", "asdf17", "asdf30", "asdf18", "asdf29", "asdf19", "asdf28", "asdf20", "asdf27", "asdf21", "asdf26", "asdf22"
         , "asdf25", "asdf23", "asdf24"};
-        Shell.test(a);
+//        Shell.test(a);
+        Quick.sort(a);
         assert isSorted(a);
         show(a);
     }

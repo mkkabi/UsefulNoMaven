@@ -1,4 +1,4 @@
-package designpatterns_pluralsight.behavioral.ChainofResponsibilityPattern;
+package DesignPatterns_Pluralsight.behavioral.ChainOfResponsibility;
 
 public abstract class Handler {
     protected Handler successor;

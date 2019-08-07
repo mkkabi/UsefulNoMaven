@@ -1,22 +1,22 @@
-package com.pluralsight.singleton;
+package DesignPatterns_Pluralsight.creational.singleton.code;
 
 public class SingletonEverydayDemo {
 
-	public static void main(String args[]) {
-		
-		Runtime singletonRuntime = Runtime.getRuntime();
+    public static void main(String args[]) {
 
-		singletonRuntime.gc();
-		
-		System.out.println(singletonRuntime);
-		
-		Runtime anotherInstance = Runtime.getRuntime();
-		
-		System.out.println(anotherInstance);
-		
-		if(singletonRuntime == anotherInstance) {
-			System.out.println("They are the same instance");
-		}
-		
-	}
+        Runtime singletonRuntime = Runtime.getRuntime();
+
+        singletonRuntime.gc();
+
+        System.out.println(singletonRuntime);
+
+        Runtime anotherInstance = Runtime.getRuntime();
+
+        System.out.println(anotherInstance);
+
+        if (singletonRuntime == anotherInstance) {
+            System.out.println("They are the same instance");
+        }
+
+    }
 }

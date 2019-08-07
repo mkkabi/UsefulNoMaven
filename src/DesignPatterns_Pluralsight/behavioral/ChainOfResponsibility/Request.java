@@ -1,5 +1,5 @@
 
-package designpatterns_pluralsight.behavioral.ChainofResponsibilityPattern;
+package DesignPatterns_Pluralsight.behavioral.ChainOfResponsibility;
  
 class Request {
     private RequestType requestType;
