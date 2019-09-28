@@ -1,4 +1,4 @@
-package com.pluralsight.decorator;
+package DesignPatterns_Pluralsight.structural.decorator;
 
 public class SimpleSandwich implements Sandwich {
 

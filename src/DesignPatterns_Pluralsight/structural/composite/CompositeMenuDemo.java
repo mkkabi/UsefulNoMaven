@@ -1,4 +1,4 @@
-package com.pluralsight.composite;
+package DesignPatterns_Pluralsight.structural.composite;
 
 
 public class CompositeMenuDemo {

@@ -1,4 +1,4 @@
-package com.pluralsight.bridge.shape1;
+package DesignPatterns_Pluralsight.structural.bridge.shape1;
 
 public class BlueSquare extends Square {
 

@@ -1,4 +1,4 @@
-package com.pluralsight.bridge;
+package DesignPatterns_Pluralsight.structural.bridge;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

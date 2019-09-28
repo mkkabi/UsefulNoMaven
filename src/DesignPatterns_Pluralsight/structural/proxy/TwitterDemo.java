@@ -1,4 +1,4 @@
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 public class TwitterDemo {
 

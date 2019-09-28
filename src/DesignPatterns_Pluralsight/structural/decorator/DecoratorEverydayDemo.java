@@ -1,4 +1,4 @@
-package com.pluralsight.decorator;
+package DesignPatterns_Pluralsight.structural.decorator;
 
 import java.io.DataOutputStream;
 import java.io.File;

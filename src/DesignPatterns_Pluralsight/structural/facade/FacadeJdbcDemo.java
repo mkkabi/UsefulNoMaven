@@ -1,4 +1,4 @@
-package com.pluralsight.facade;
+package DesignPatterns_Pluralsight.structural.facade;
 
 import java.util.List;
 

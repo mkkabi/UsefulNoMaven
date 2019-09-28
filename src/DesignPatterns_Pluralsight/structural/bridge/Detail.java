@@ -1,4 +1,4 @@
-package com.pluralsight.bridge;
+package DesignPatterns_Pluralsight.structural.bridge;
 
 public class Detail {
 	private String label;

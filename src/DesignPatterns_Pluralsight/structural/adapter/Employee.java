@@ -1,4 +1,4 @@
-package com.pluralsight.adapter;
+package DesignPatterns_Pluralsight.structural.adapter;
 
 public interface Employee {
 

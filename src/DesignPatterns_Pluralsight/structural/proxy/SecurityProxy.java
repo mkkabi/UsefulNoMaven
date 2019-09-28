@@ -1,4 +1,4 @@
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;

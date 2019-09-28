@@ -1,4 +1,4 @@
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 public interface TwitterService {
 	public String getTimeline(String screenName);
@@ -27,7 +27,7 @@ public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
 
 ////////////////////////////////////////////////////////////////////////
 
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -67,7 +67,7 @@ System.out.println(service.getTimeline("bh5k"));
 
 ////////////////////////////////////////////////////////////////////////
 
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 import java.util.List;
 

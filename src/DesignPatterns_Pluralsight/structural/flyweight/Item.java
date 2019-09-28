@@ -1,4 +1,4 @@
-package com.pluralsight.flyweight;
+package DesignPatterns_Pluralsight.structural.flyweight;
 
 //Instances of Item will be the Flyweights
 class Item {

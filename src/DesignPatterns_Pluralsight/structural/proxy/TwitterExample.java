@@ -1,4 +1,4 @@
-package com.pluralsight.proxy;
+package DesignPatterns_Pluralsight.structural.proxy;
 
 import java.util.List;
 

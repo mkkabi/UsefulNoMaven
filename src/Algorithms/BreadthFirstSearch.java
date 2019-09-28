@@ -15,7 +15,7 @@ public class BreadthFirstSearch {
     private LinkedList<Integer> adj[]; //Adjacency Lists 
   
     // Constructor 
-    Graph(int v) 
+    BreadthFirstSearch(int v) 
     { 
         V = v; 
         adj = new LinkedList[v]; 
@@ -68,7 +68,7 @@ public class BreadthFirstSearch {
     // Driver method to 
     public static void main(String args[]) 
     { 
-        Graph g = new Graph(4); 
+        BreadthFirstSearch g = new BreadthFirstSearch(4); 
   
         g.addEdge(0, 1); 
         g.addEdge(0, 2); 
