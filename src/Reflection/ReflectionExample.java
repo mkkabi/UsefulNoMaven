@@ -5,8 +5,34 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ReflectionExample {
+    
+    class method2 {
+      public int add(int a, int b)
+      {
+         return a + b;
+      }
+    }
+    public static void invokeMethodByName(Class cls, method2 methobj) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException{
+        try {
+            Class partypes[] = new Class[2];
+            partypes[0] = Integer.TYPE;
+            partypes[1] = Integer.TYPE;
+            Method meth = cls.getMethod("add", partypes);
+            Object arglist[] = new Object[2];
+            arglist[0] = new Integer(37);
+            arglist[1] = new Integer(47);
+            
+            Object retobj = meth.invoke(methobj, arglist);
+            Integer retval = (Integer)retobj;
+            System.out.println(retval.intValue());
+        } catch (InvocationTargetException ex) {
+            Logger.getLogger(ReflectionExample.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     public static void printGettersSetters(Class aClass) {
         Method[] methods = aClass.getMethods();
@@ -28,9 +54,7 @@ public class ReflectionExample {
         if (method.getParameterTypes().length != 0) {
             return false;
         }
-        if (void.class.equals(method.getReturnType())) 
-            return false;
-        return true;
+        return !void.class.equals(method.getReturnType());
     }
 
     public static boolean isSetter(Method method) {
