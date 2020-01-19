@@ -1,4 +1,4 @@
-package DesignPatterns_Vaaskaran;
+package DesignPatterns_Vaaskaran.Singleton;
 
 public class SingletonEagerInitialization {
 
