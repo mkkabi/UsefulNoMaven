@@ -1,4 +1,4 @@
-package multyThread;
+package Threads;
 
 	// Правильная реализация поставщика и потребителя.
 import static java.lang.Thread.sleep;
